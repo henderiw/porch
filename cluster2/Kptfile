@@ -1,0 +1,22 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata: # kpt-merge: /cluster2
+  name: cluster2
+  annotations:
+    config.kubernetes.io/local-config: "true"
+    internal.kpt.dev/upstream-identifier: 'kpt.dev|Kptfile|default|cluster2'
+upstream:
+  type: git
+  git:
+    repo: https://github.com/henderiw-nephio/blueprints-manifests.git
+    directory: cluster
+    ref: main
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/henderiw-nephio/blueprints-manifests.git
+    directory: cluster
+    ref: main
+    commit: 3bd98008d29517463423c5bedbfabf5d1c223f64
+info:
+  description: blueprint cluster package
