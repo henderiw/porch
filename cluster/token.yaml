@@ -1,0 +1,7 @@
+apiVersion: infra.nephio.org/v1alpha1
+kind: Token
+metadata: # kpt-merge: /xxx-access-token
+  name: xxx-access-token
+  annotations:
+    internal.kpt.dev/upstream-identifier: 'infra.nephio.org|Token|default|xxx-access-token'
+spec:
